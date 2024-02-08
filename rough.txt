@@ -1,0 +1,37 @@
+RxJs Tutorial:
+
+1. In Angular we using the RxJs to make the asynchronous call as well as the callback function call.
+2. In angular we have an three important topics:
+    1. Observable
+    2. Observer --> next, complete, error
+    3. Operator
+
+3. If any changes in the data the observable was emit the data over a time. if you using the subscriber then
+    only you should get an changed data.
+
+4. observables need to subscribed otherwise observable doesn't to anything own.
+
+import { Observable } from 'rxjs';
+
+const observable = new Observable((observer)=>{
+    // here emiting the values
+    try {
+         observer.next('Ram');
+         observer.next('Siva');
+         observer.complete();
+    }
+    catch(eror){
+         observer.error('oops');
+    }
+})
+
+const observer = {
+    // here we receiving the values
+    next: value => console.log(value),
+    error: error => console.log(error),
+    complete: () => console.log('Completed')
+}
+
+// here we are making the connection between the observable to observer using the subscribe method then only the 
+// observable receives the observer as an object.
+observable.subscribe(observer)
