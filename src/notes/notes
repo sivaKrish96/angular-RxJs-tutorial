@@ -1,0 +1,24 @@
+# RxJs Tutorial:
+    The RxJs is a library of JavaScript and it full is Reactive Extension for JavScript and it was used to 
+    habdle the async function and handle the bunch of API calls using the Reactive Programming.
+
+# Inportant Topics:
+    1. Observable:
+        The observable is an Class and it was received the first parameter as a callback function and
+        this callback receives the observer as an object to emit the each and every value of the infinite
+        Array values from API call or from async function.
+
+    2. Observer
+        It's an object containing the bunch of methods to handle the emitted value from the Observable.
+
+    3. Subscription
+
+    4. Subject
+
+    5. Operator
+        1. map
+        2. filter
+        3. reduce
+        4. every 
+    
+    6. Schedulers
